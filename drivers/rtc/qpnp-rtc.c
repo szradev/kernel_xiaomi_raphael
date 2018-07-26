@@ -298,7 +298,7 @@ qpnp_rtc_set_alarm(struct device *dev, struct rtc_wkalrm *alarm)
 	 * vendor partition. Oh well...
 	 */
 	if (!strcmp(current->comm, "alarm@1.0-servi"))
-		secs -= 120;
+		secs -= 60;
 
 	/*
 	 * Read the current RTC time and verify if the alarm time is in the
