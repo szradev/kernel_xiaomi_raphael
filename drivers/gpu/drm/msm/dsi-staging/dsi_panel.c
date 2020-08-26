@@ -771,6 +771,9 @@ int dsi_panel_set_fod_hbm(struct dsi_panel *panel, bool status)
 {
 	int rc = 0;
 
+	if (panel->hbm_mode)
+		return rc;
+
 	if (status) {
 #ifdef CONFIG_EXPOSURE_ADJUSTMENT
 		if (ea_panel_is_enabled()) {
